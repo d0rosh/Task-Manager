@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  			crossorigin="anonymous">
+  	</script>
+  	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container-fluid">	
+			<header>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="logo">
+							<a href="index.html"><img src="img/logo2.png" alt="logo"></a>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-12">
+						<button class="menu_btn"><i class="fa fa-bars"></i></button>
+						<div class="wrapper_tabs">
+							<div id="is_active" class="tab">New Tasks <span class="n_count">0</span></div>
+							<div class="tab">Progress Tasks <span class="p_count">0</span></div>
+							<div class="tab">Completed Tasks <span class="c_count">0</span></div>
+							<div class="tab"> Removed Tasks <span class="r_count">0</span></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="container-fluid">
+			<div class="wrapper_tabs_content">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="is_block" class="content_tabs">
+							<div class="new_task"></div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="content_tabs">
+							<div class="progress_task"></div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="content_tabs">
+							<div class="completed_task"></div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="content_tabs">
+							<div class="removed_task"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="btn_plus_task">+</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="popap_form">
+		<div class="add_new_task">
+			<form action="#">
+				<input class="name_author" type="text" placeholder="Your name">
+				<input class="name_task" type="text" placeholder="name_task">
+				<textarea class="description_task" cols="30" rows="10" placeholder="Description to the Task..."></textarea>
+				<button class="add_btn">Add</button>
+			</form>
+			<div class="exit_popap">&#10005;</div>
+		</div>
+	</div>
+	
+	<script src="js/main.js"></script>
+	<script src="js/jquery.js"></script> 
+</body>
+</html>

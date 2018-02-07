@@ -1,0 +1,277 @@
+body {
+ 	margin: 0;
+ 	padding: 0;
+ 	color: #2f639b;
+ 	font-family: Arial;
+ }
+
+header {
+	height: 80px;
+	width: 100%;
+	background: #FD674D;
+	position: relative;
+}
+
+.logo img {
+	width: 100px;
+}
+
+.menu_btn {
+	position: absolute;
+	top: -56px;
+	right: 25px;
+	border: none;
+	background: #2f639b;
+	color: #fff;
+	font-size: 28px;
+	z-index: 99999;
+	padding: 1px 9px;
+	cursor: pointer;
+}
+
+
+.wrapper_tabs.is_block {
+	display: block;
+}
+
+.wrapper_tabs .tab {
+	color: #2f639b;
+	cursor: pointer;
+	float: left;
+	padding: 5px 2px;
+	background: transparent;
+	margin-right: 25px;
+	margin-top: 15px;
+	border-bottom: 2px solid #fff;
+	font-weight: 700;
+}
+
+.wrapper_tabs .tab:hover {
+	color: #fff;
+}
+
+#is_active {
+	color: #fff;
+}
+
+.wrapper_tabs_content {
+	width: 100%;
+}
+
+.content_tabs{
+	display: none;
+}
+
+#is_block {
+	display: block;
+}
+
+.btn_plus_task {
+	margin: 40px auto;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 27px;
+	font-weight: 700;
+	color: tomato;
+	padding-top: 4px;
+	background: transparent;
+	border:2px solid tomato;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*стилі форми для добавлення тасків*/
+.popap_form {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background: rgba(0,0,0,0.6);
+	/*transition: 2s;*/
+}
+.popap_form .add_new_task {
+	background: #fff;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -150px;
+	padding: 20px;
+}
+
+.add_new_task input, .add_new_task textarea {
+	display: block;
+	border: 2px solid #000;
+	background: #fff;
+	color: #190139;
+	margin: 0 auto 10px;
+	outline: 0;
+	width: 80%;
+	padding: 3px 5px;
+}
+
+.add_new_task textarea {
+	height: 100px;
+}
+
+.add_new_task .error {
+	color: #a52b37;
+	font-size: 12px;
+	text-align: center;
+}
+
+.add_new_task button {
+	border:2px solid #000;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+	background: transparent;
+	color: #000;
+	padding: 4px 7px;
+	outline: 0;
+}
+
+.add_new_task .exit_popap {
+	position: absolute;
+	top: -17px;
+	right: -19px;
+	padding: 2px 9px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	color: #000;
+	font-weight: 700;
+	font-size: 17px;
+	z-index: 100;
+	cursor: pointer;
+	background: #fff;
+}
+
+/*стилі блоків з завданням*/
+.new_task, .progress_task, .completed_task, .removed_task {
+	overflow:hidden; 
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-ms--display: flex;
+	flex-direction: row;
+}
+.task_block {
+	display: inline-block;
+	width:24%;
+	border:2px solid tomato;
+	margin:2px;
+	color: #2a2a2a;
+	padding: 5px 8px;
+}
+
+.task_block img {
+	width: 100%;
+	height: 150px;
+}
+
+.task_block p, .task_block h4 {
+	margin-bottom: 5px;
+	line-height: 1;
+	font-size: 1em;
+	 word-wrap: break-word;
+}
+.task_block h4 {
+	font-size: 1.5em;
+}
+
+.task_block p span {
+	font-weight: 700;
+}
+
+.container-fluid {
+	padding: 0!important;
+	margin: 0!important;
+}
+
+.row {
+	margin: 0!important;
+}
+
+.input_label, .delete_task {
+	background: #2f639b;
+	padding: 6px 9px;
+	color: #fff;
+	cursor: pointer;
+	transition: 1s;
+	display: block;
+	margin: 5px auto;
+	text-align: center;
+	border:none;
+}
+.input_label:hover {
+	background: #2F6374;
+	transition: 1s;
+}
+
+.image_field {
+	display: none;
+}
+
+.wrap_select {
+	width: 180px;
+	height: 35px;
+	background: #fff;
+	position: relative;
+	margin: 5px auto;
+	display: block;
+}
+
+.wrap_select:before {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 33px;
+	background: #ccc;
+	position: absolute;
+	top: 1px;
+	right: 30px;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.wrap_select:after {
+	content:'';
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: #FD674D transparent transparent transparent;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	z-index: 1;
+	margin-top: -2px;
+	pointer-events: none;
+}
+
+.wrap_select select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	background: none;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: #000;
+}
+
+.wrap_select select:focus {
+	outline: 0;
+	border-color: #2f639b;
+}
+
+.wrap_select select:hover {
+	cursor: pointer;
+}
